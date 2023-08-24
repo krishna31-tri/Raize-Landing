@@ -1,15 +1,16 @@
 <template>
   <div class="partner-ui">
-    <h2 class="partner-heading">Our Partners</h2>
-    <div class="partner-scroll-container">
-      <div class="partner-list" ref="partnerList">
-        <div
-          class="partner-card"
-          v-for="partner in partners"
-          :key="partner.id"
-        ></div>
+    <img class="partnerbg" alt="Vue logo" src="../assets/incentivebg.png" />
+    <div class="partner-ui-div">
+      <h2 class="partner-heading">Our Partners</h2>
+      <p>Short description goes here</p>
+      <div class="partner-scroll-container">
+        <div class="partner-list" ref="partnerList">
+          <div class="partner-card" v-for="partner in partners" :key="partner.id"></div>
+        </div>
       </div>
     </div>
+
   </div>
 </template>
 
@@ -24,7 +25,7 @@ export default {
         { id: 2 },
         { id: 2 },
         { id: 2 },
-        
+
         { id: 2 },
         // Add more partner data as needed
       ],
@@ -44,6 +45,11 @@ export default {
 
 <style scoped>
 .partner-ui {
+  position: relative;
+  padding: 9% 0%;
+}
+
+.partner-ui-div {
   padding: 16px;
 }
 
@@ -61,8 +67,17 @@ export default {
   flex-wrap: nowrap;
 }
 
+.partnerbg {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 97%;
+  z-index: -1;
+  height: 100%;
+}
+
 .partner-card {
-  width: 268px;
+  width: 20%;
   height: 116px;
   border-radius: 6px;
   margin-right: 16px;

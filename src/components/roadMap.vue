@@ -1,98 +1,135 @@
 <template>
   <div class="roadmap">
-    <h1>Road Map</h1>
-    <div class="line"></div>
-    <div class="cards-container">
-      <div class="center-line"></div>
-      <!-- Cards above the line -->
-      <div class="cards-row above">
-        <div class="card" v-for="(card, index) in aboveCards" :key="index">
-          <div class="vertical-line"></div>
-          {{ card.title }}
+    <img class="roadmapbg" alt="Vue logo" src="../assets/roadmapbg.svg" />
+    <div class="roadmap-div">
+      <h1>Road Map</h1>
+      <p>Short description goes here</p>
+
+      <div className="timeline">
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="timeline-content">
+            <h2>Event 2</h2>
+            <p>Event 2 description</p>
+          </div>
+
         </div>
-      </div>
-      <!-- Cards below the line -->
-      <div class="cards-row below">
-        <div class="card" v-for="(card, index) in belowCards" :key="index">
-          {{ card.title }}
-          <div class="vertical-line"></div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="timeline-content">
+            <h2>Event 2</h2>
+            <p>Event 2 description</p>
+          </div>
+
         </div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="timeline-content">
+            <h2>Event 2</h2>
+            <p>Event 2 description</p>
+          </div>
+
+        </div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="timeline-content">
+            <h2>Event 2</h2>
+            <p>Event 2 description</p>
+          </div>
+
+        </div>
+        <div className="timeline-item">
+          <div className="circle"></div>
+          <div className="timeline-content">
+            <h2>Event 2</h2>
+            <p>Event 2 description</p>
+          </div>
+
+        </div>
+
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      aboveCards: [
-        { title: "Above Card 1" },
-        { title: "Above Card 2" },
-        { title: "Above Card 3" },
-      ],
-      belowCards: [
-        { title: "Below Card 1" },
-        { title: "Below Card 2" },
-      ],
-    };
-  },
-};
+
 </script>
 
 <style scoped>
 .roadmap {
   text-align: center;
-}
-
-.line {
-  border-top: 1px solid black;
-  margin: 20px auto;
-  width: 100%;
-}
-
-.cards-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   position: relative;
 }
 
-.cards-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 10px 0;
-}
-
-.center-line {
+.roadmapbg {
   position: absolute;
+  top: 0%;
+  left: 0%;
+  width: 100%;
   height: 100%;
-  width: 1px;
-  background-color: black;
-  left: 50%;
-  top: 0;
-  transform: translateX(-50%);
   z-index: -1;
 }
 
-.card {
-  display: flex;
-  align-items: center;
+.timeline {
   position: relative;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 5px;
-  background-color: #f7f7f7;
+  max-width: 800px;
+  margin: 2% auto;
+  padding: 20px;
+  color: black;
+  width: 80%;
 }
 
-.vertical-line {
+.timeline::before {
+  content: '';
   position: absolute;
-  height: 100%;
-  width: 1px;
-  background-color: black;
-  left: 50%;
   top: 0;
+  bottom: 0;
+  left: 0%;
+  width: 9px;
+  background-color: #838383;
   transform: translateX(-50%);
+}
+
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  margin-left: 22px;
+}
+
+.timeline-content {
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 4px;
+  color: black;
+  border: 2px solid black;
+
+  margin-bottom: 10px;
+
+}
+
+
+.timeline p {
+  text-align: start;
+}
+
+.timeline .circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #004ef7;
+  position: relative;
+  left: -53px;
+  top: 94px;
+  margin-bottom: 20px;
+  z-index: 2;
+  border: 2px solid black;
+}
+
+@media (min-width:768px) {
+  .roadmap {
+    display: none;
+  }
 }
 </style>
