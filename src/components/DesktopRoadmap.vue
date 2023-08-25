@@ -7,16 +7,25 @@
                     <h2>Component 1</h2>
                     <p>Description of Component 1</p>
                     <div class="vert-line"></div>
+                    <div class="circles">
+
+                    </div>
                 </div>
                 <div class="event">
                     <h2>Component 2</h2>
                     <p>Description of Component 2</p>
                     <div class="vert-line"></div>
+                    <div class="circles">
+
+                    </div>
                 </div>
                 <div class="event">
                     <h2>Component 3</h2>
                     <p>Description of Component 3</p>
                     <div class="vert-line"></div>
+                    <div class="circles">
+
+                    </div>
                 </div>
             </div>
             <div class="line4"></div>
@@ -25,11 +34,17 @@
                     <h2>Component 4</h2>
                     <p>Description of Component 4</p>
                     <div class="vert-line"></div>
+                    <div class="circles">
+
+                    </div>
                 </div>
                 <div class="event">
                     <h2>Component 5</h2>
                     <p>Description of Component 5</p>
                     <div class="vert-line"></div>
+                    <div class="circles">
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,7 +85,7 @@ export default {
     width: 100%;
     height: 2px;
     background-color: #ccc;
-    margin: 3% 0%;
+    margin: 80px 0%;
 }
 
 .upper-components {
@@ -79,6 +94,7 @@ export default {
     width: 80%;
     padding: 20px;
     max-width: 1500px;
+    position: relative;
 }
 
 .lower-components {
@@ -87,24 +103,47 @@ export default {
     width: 80%;
     padding: 20px;
     max-width: 1500px;
+    position: relative;
 }
 
 .upper-components .vert-line {
-    height: 79px;
+    height: 98px;
     width: 3px;
     position: absolute;
     left: 50%;
-    bottom: -64%;
+    bottom: -79%;
     z-index: 2;
     background-color: red;
 }
 
+.upper-components .circles {
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    left: 48.5%;
+    bottom: -86%;
+    z-index: 2;
+    background-color: red;
+    border-radius: 100%;
+}
+
+.lower-components .circles {
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    left: 48.5%;
+    top: -87%;
+    z-index: 2;
+    background-color: red;
+    border-radius: 100%;
+}
+
 .lower-components .vert-line {
-    height: 79px;
+    height: 101px;
     width: 3px;
     position: absolute;
     left: 50%;
-    top: -64%;
+    top: -80%;
     z-index: 2;
     background-color: red;
 }
@@ -118,7 +157,7 @@ export default {
     max-width: 25%;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .roadmap-desktop {
         display: none;
     }

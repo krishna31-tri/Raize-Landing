@@ -127,7 +127,7 @@
   border: 2px solid black;
 }
 
-@media (min-width:768px) {
+@media (min-width:1000px) {
   .roadmap {
     display: none;
   }
