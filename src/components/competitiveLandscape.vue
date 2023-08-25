@@ -5,7 +5,9 @@
       <thead>
         <tr>
           <th style="width: 200px; background: none;"></th>
-          <th v-for="(company, companyName) in companies" :key="companyName" style="width: 200px; background: none;">{{ companyName }}</th>
+          <th v-for="(company, companyName) in companies" :key="companyName" style="width: 200px; background: none;">
+            <img :src="getCompanyLogo(companyName)" alt="Company Logo" class="company-logo" />
+          </th>
         </tr>
       </thead>
       <tbody>
@@ -24,6 +26,7 @@
 export default {
   data() {
     return {
+      // ... your companies and properties data ...
       companies: {
         Raize: {
           freeAccess: true,
@@ -35,7 +38,7 @@ export default {
           fcfs: false,
           equityDeals: true,
         },
-        abv: {
+        Coinlist: {
           freeAccess: true,
           accessWithoutTokenAndLock: false,
           investmentSize: true,
@@ -45,7 +48,7 @@ export default {
           fcfs: false,
           equityDeals: true,
         },
-        ccc: {
+        Republic: {
           freeAccess: true,
           accessWithoutTokenAndLock: false,
           investmentSize: true,
@@ -55,7 +58,7 @@ export default {
           fcfs: false,
           equityDeals: true,
         },
-        sss: {
+        DAOMaker: {
           freeAccess: true,
           accessWithoutTokenAndLock: false,
           investmentSize: true,
@@ -65,17 +68,7 @@ export default {
           fcfs: false,
           equityDeals: true,
         },
-        dds: {
-          freeAccess: true,
-          accessWithoutTokenAndLock: false,
-          investmentSize: true,
-          referralSystem: false,
-          typeOfDeal: true,
-          lottery: true,
-          fcfs: false,
-          equityDeals: true,
-        },
-        sa: {
+        Tokensoft: {
           freeAccess: true,
           accessWithoutTokenAndLock: false,
           investmentSize: true,
@@ -103,10 +96,17 @@ export default {
     getTickCross(value) {
       return value ? "✔️" : "❌";
     },
+    getCompanyLogo(companyName) {
+      // Adjust this path based on your actual project structure
+      return require(`@/assets/${companyName}_logo.png`);
+    },
   },
 };
 </script>
+
 <style scoped>
+
+
 .table-container {
   display: flex;
     align-items: center;
@@ -131,7 +131,11 @@ export default {
 .custom-table th:first-child,
 .custom-table td:first-child {
   text-align: left;
+  color: rgba(74, 113, 240, 1);
   border-left: none;
+  font-size: 16px;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 700;
 }
 
 .custom-table th {
@@ -152,5 +156,10 @@ export default {
 
 .highlighted-row {
   background-color: rgba(0, 180, 215, 0.37);
+}
+
+.company-logo {
+  max-width: 100px;
+  max-height: 40px;
 }
 </style>

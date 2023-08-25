@@ -4,7 +4,7 @@
         <div class="timeline">
             <div class="upper-components">
                 <div class="event">
-                    <h2>Component 1</h2>
+                    <h2>Q4 - 2023</h2>
                     <p>Description of Component 1</p>
                     <div class="vert-line"></div>
                     <div class="circles">

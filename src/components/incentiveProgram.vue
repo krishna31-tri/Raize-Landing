@@ -128,6 +128,7 @@ export default {
   flex-direction: row;
   justify-content: space-around;
   margin-top: 38px;
+  flex-wrap: wrap;
   position: relative;
 }
 

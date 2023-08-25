@@ -18,7 +18,7 @@
         <div class="video-container">
           <img class="dots" alt="Vue logo" src="../assets/dots.png" />
           <video autoplay muted>
-            <source src="../assets/videoHome.mp4" type="video/mp4">
+            <source src="../assets/videoHome.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
@@ -34,6 +34,7 @@ export default {
 };
 </script>
 <style>
+/* Desktop view styles (default) */
 .home {
   position: relative;
 }
@@ -51,7 +52,6 @@ export default {
 .homepage {
   display: flex;
   flex-direction: column;
-  width: 50%;
 }
 
 .iconbg {
@@ -83,9 +83,11 @@ export default {
 .headingpost {
   margin-top: -45px;
   margin-left: -250px;
-  background: linear-gradient(to right,
-      rgb(15, 66, 233),
-      rgb(160, 203, 235, 1));
+  background: linear-gradient(
+    to right,
+    rgb(15, 66, 233),
+    rgb(160, 203, 235, 1)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -122,9 +124,6 @@ export default {
 }
 
 .videoside {
-  /* width: 582.93px;
-  height: 918.16px;
-  background: url(../assets/backgroundhome.png); */
   width: 50%;
   height: 100%;
   display: flex;
@@ -156,5 +155,75 @@ video {
   z-index: -1;
   width: 43%;
   height: 750px;
+}
+
+/* Tablet view styles */
+@media (max-width: 1024px) {
+  .homeWrapper {
+    flex-direction: column;
+    height: auto;
+    gap: 45px;
+  }
+
+  .homepage {
+    text-align: center;
+  }
+
+  .iconbg {
+    bottom: -15%;
+    width: 100px;
+  }
+
+  .heading {
+    font-size: 24px;
+    padding: 20px;
+    margin-left: 0;
+  }
+
+  .headingpost {
+    margin-top: -30px;
+    margin-left: 0;
+  }
+
+  .buttons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .genesisbutton,
+  .pitchbutton {
+    width: 80%;
+  }
+}
+
+/* Mobile view styles */
+@media (max-width: 768px) {
+  .homebg {
+    width: 100%;
+  }
+
+  .iconbg {
+    bottom: -5%;
+  }
+
+  .videoside {
+    width: 80%;
+    padding: 20px;
+  }
+
+  video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 650px) {
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .pitchbutton{
+    height: 70px;
+    width: 164px;
+  }
 }
 </style>

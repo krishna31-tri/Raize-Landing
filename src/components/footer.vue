@@ -20,20 +20,12 @@
         <p>Risk disclaimer</p>
         <p>Cookie policy</p>
       </div>
-
       <div class="Footer-item">
         <h1>Web³ CROWDFUNDING PLATFORM</h1>
-        <p>
-          Subscribe to our newsletter to get updates about our services and
-          offers
-        </p>
+        <p>Subscribe to our newsletter to get updates about our services and offers</p>
         <div class="input-container">
-          <input
-            type="text"
-            placeholder="Enter your email...."
-            class="email-input"
-          />
-          <button class="submit-button">Subscripe</button>
+          <input type="text" placeholder="Enter your email...." class="email-input" />
+          <button class="submit-button">Subscribe</button>
         </div>
         <div class="media-icons">
           <img src="../assets/LinkedIn_icon.png" />
@@ -44,62 +36,55 @@
     </div>
   </div>
 </template>
-  
-  <script>
+
+<script>
 export default {
   name: "FooterPage",
 };
 </script>
-  <style>
+
+<style scoped>
 .footer {
   background-color: #001d3d;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: flex-start;
   flex-wrap: wrap;
+  padding: 40px 0;
 }
-.Footer-item1{
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    color: white;
-    font-size: 13px;
-    margin-top: 38px;
+
+.Footer-item1 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: white;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-right: 20px;
 }
+
 .Footer-item {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   color: white;
+  font-size: 13px;
+  margin-top: 20px;
+  margin-right: 20px;
 }
+
 .Footer-item h1 {
   font-size: 24px;
+  margin-bottom: 10px;
 }
+
 .Footer-item p {
   color: #c4c4c4;
   font-size: 13px;
-}
-.footer-row1 {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.footer-row2 {
-  display: flex;
-  flex-direction: column;
-}
-.footer-row3 {
-  display: flex;
-  flex-direction: column;
+  margin-bottom: 5px;
 }
 
-.footer-item {
-  color: #ffffff;
-  font-size: 18px;
-  padding: 10px 20px;
-}
 .input-container {
   position: relative;
   display: inline-block;
@@ -126,11 +111,39 @@ export default {
   margin-top: 22px;
   background-color: #4a71f0;
 }
+
 .media-icons {
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
-  width: 100px;
   justify-content: space-between;
+  width: 100px;
 }
-</style> 
+
+@media (max-width: 768px) {
+  .Footer-item1, .Footer-item, .Footer-item h1, .Footer-item p {
+    /* font-size: 12px; */
+  }
+  
+  .input-container {
+    /* flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px; */
+  }
+  
+  .email-input {
+    /* width: 100%;
+    margin-right: 0;
+    margin-bottom: 5px; */
+  }
+  
+  .submit-button {
+    /* width: 100%; */
+  }
+  
+  .media-icons {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+</style>

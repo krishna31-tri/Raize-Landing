@@ -10,7 +10,6 @@
         </div>
       </div>
     </div>
-
   </div>
 </template>
 
@@ -69,8 +68,8 @@ export default {
 
 .partnerbg {
   position: absolute;
-  top: 0%;
-  left: 0%;
+  top: 0;
+  left: 0;
   width: 97%;
   z-index: -1;
   height: 100%;
@@ -83,5 +82,22 @@ export default {
   margin-right: 16px;
   background-color: #f0f0f0;
   /* Add any other styling you need */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .partner-ui {
+    padding: 6% 0; /* Adjust padding for smaller screens */
+  }
+
+  .partner-heading {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .partner-card {
+    width: 30%; /* Adjust card width for smaller screens */
+    height: 80px; /* Adjust card height for smaller screens */
+    margin-right: 10px; /* Adjust margin for smaller screens */
+  }
 }
 </style>
