@@ -1,26 +1,26 @@
 <template>
   <div>
     <div class="footer">
-      <div class="Footer-item1">
+      <div class="footer-item">
         <h1>More Information</h1>
         <p>FAQ</p>
         <p>Deck</p>
         <p>Support</p>
         <p>Media Deck</p>
-        <p>press Inquiries</p>
+        <p>Press Inquiries</p>
         <div class="copyright">
           <p>&copy; 2023 Raizers. All rights reserved.</p>
         </div>
       </div>
-      <div class="Footer-item">
+      <div class="footer-item">
         <h1>Legal Agreement</h1>
         <p>Terms & Conditions</p>
         <p>Partner's Incentive Agreement</p>
         <p>Privacy Policy</p>
-        <p>Risk disclaimer</p>
-        <p>Cookie policy</p>
+        <p>Risk Disclaimer</p>
+        <p>Cookie Policy</p>
       </div>
-      <div class="Footer-item">
+      <div class="footer-item">
         <h1>Web³ CROWDFUNDING PLATFORM</h1>
         <p>Subscribe to our newsletter to get updates about our services and offers</p>
         <div class="input-container">
@@ -28,9 +28,9 @@
           <button class="submit-button">Subscribe</button>
         </div>
         <div class="media-icons">
-          <img src="../assets/LinkedIn_icon.png" />
-          <img src="../assets/Logo_of_Twitter.png" />
-          <img src="../assets/Telegram_logo.png" />
+          <img src="../assets/LinkedIn_icon.png" alt="LinkedIn" />
+          <img src="../assets/Logo_of_Twitter.png" alt="Twitter" />
+          <img src="../assets/Telegram_logo.png" alt="Telegram" />
         </div>
       </div>
     </div>
@@ -47,103 +47,96 @@ export default {
 .footer {
   background-color: #001d3d;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: flex-start;
   flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 40px 0;
 }
 
-.Footer-item1 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+.footer-item {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 10px;
   color: white;
   font-size: 13px;
-  margin-top: 20px;
-  margin-right: 20px;
 }
 
-.Footer-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  color: white;
-  font-size: 13px;
-  margin-top: 20px;
-  margin-right: 20px;
-}
-
-.Footer-item h1 {
+.footer-item h1 {
   font-size: 24px;
   margin-bottom: 10px;
 }
 
-.Footer-item p {
+.footer-item p {
   color: #c4c4c4;
   font-size: 13px;
   margin-bottom: 5px;
 }
 
 .input-container {
-  position: relative;
-  display: inline-block;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .email-input {
-  width: 460px;
+  flex: 1;
   height: 50px;
   padding: 10px;
   text-align: left;
   border: 1px solid white;
   background: none;
-  margin-top: 22px;
   border-radius: 60px;
+  color: white;
 }
+
 .submit-button {
-  position: absolute;
-  height: 72px;
+  height: 50px;
   width: 160px;
-  right: 0;
   border-radius: 60px;
-  padding: 24px 36px 24px 36px;
-  margin-top: 22px;
+  padding: 0 36px;
+  margin-left: 10px;
   background-color: #4a71f0;
+  border: none;
+  color: white;
 }
 
 .media-icons {
   margin-top: 10px;
   display: flex;
-  flex-direction: row;
   justify-content: space-between;
   width: 100px;
 }
 
 @media (max-width: 768px) {
-  .Footer-item1, .Footer-item, .Footer-item h1, .Footer-item p {
-    /* font-size: 12px; */
+  .footer {
+    flex-direction: column;
+    align-items: center;
   }
-  
+
+  .footer-item {
+    max-width: 100%;
+    text-align: center;
+    margin: 15px 0;
+  }
+
   .input-container {
-    /* flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 20px; */
+    flex-direction: column;
+    align-items: stretch;
+    margin-top: 20px;
   }
-  
+
   .email-input {
-    /* width: 100%;
-    margin-right: 0;
-    margin-bottom: 5px; */
+    width: 100%;
+    margin: 10px 0;
   }
-  
+
   .submit-button {
-    /* width: 100%; */
+    width: 100%;
+    margin-left: 0;
   }
-  
+
   .media-icons {
     width: 100%;
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 </style>

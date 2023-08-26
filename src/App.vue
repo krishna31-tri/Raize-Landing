@@ -34,7 +34,7 @@ import FooterPage from './components/footer.vue'
 import NavBar from './components/NavBar.vue';
 import SubscriptionPlan from './components/subscriptionPlan.vue';
 import DesktopRoadmap from './components/DesktopRoadmap.vue';
-import RoadMap from './components/RoadMap.vue';
+import RoadMap from './components/roadMap.vue';
 import MobileSubscription from './components/MobileSubscription.vue';
 import MobilecompetitveLandscape from './components/MobilecompetitveLandscape.vue';
 import MobileNav from './components/MobileNav.vue';
