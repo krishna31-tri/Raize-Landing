@@ -50,6 +50,8 @@ export default {
   flex-wrap: wrap;
   justify-content: space-evenly;
   padding: 40px 0;
+  text-align: start;
+
 }
 
 .footer-item {
@@ -63,6 +65,7 @@ export default {
 .footer-item h1 {
   font-size: 24px;
   margin-bottom: 10px;
+  text-align: start;
 }
 
 .footer-item p {
@@ -89,7 +92,7 @@ export default {
 }
 
 .submit-button {
-  height: 50px;
+  height: 71px;
   width: 160px;
   border-radius: 60px;
   padding: 0 36px;
@@ -97,6 +100,7 @@ export default {
   background-color: #4a71f0;
   border: none;
   color: white;
+  margin-left: -45%;
 }
 
 .media-icons {
@@ -106,37 +110,47 @@ export default {
   width: 100px;
 }
 
+@media (max-width: 1100px) {
+  .footer-item {
+    min-width: 42%;
+  }
+
+  .footer {
+    background-color: #001d3d;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 40px;
+    text-align: start;
+  }
+
+  .submit-button {
+    margin-left: -30%;
+  }
+}
+
 @media (max-width: 768px) {
   .footer {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding: 8%;
   }
 
   .footer-item {
     max-width: 100%;
-    text-align: center;
+    text-align: start;
     margin: 15px 0;
   }
 
-  .input-container {
-    flex-direction: column;
-    align-items: stretch;
-    margin-top: 20px;
-  }
-
-  .email-input {
-    width: 100%;
-    margin: 10px 0;
-  }
-
   .submit-button {
-    width: 100%;
-    margin-left: 0;
+    margin-left: -30%;
   }
 
   .media-icons {
-    width: 100%;
-    justify-content: center;
+    width: 42%;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 7%;
   }
 }
 </style>

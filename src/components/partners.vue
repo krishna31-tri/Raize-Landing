@@ -26,6 +26,11 @@ export default {
         { id: 2 },
 
         { id: 2 },
+        { id: 2 },
+        { id: 2 },
+        { id: 2 },
+        { id: 2 },
+        { id: 2 },
         // Add more partner data as needed
       ],
     };
@@ -64,6 +69,20 @@ export default {
 .partner-list {
   display: flex;
   flex-wrap: nowrap;
+  width: fit-content;
+  overflow: scroll;
+}
+
+.partner-list::-webkit-scrollbar {
+  width: 0.5em;
+  /* Set a small width to make the pseudo-element active */
+  height: 0.5em;
+  /* Set a small height to make the pseudo-element active */
+}
+
+.partner-list::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  /* Make the scrollbar thumb transparent */
 }
 
 .partnerbg {
@@ -76,7 +95,7 @@ export default {
 }
 
 .partner-card {
-  width: 20%;
+  width: 200px;
   height: 116px;
   border-radius: 6px;
   margin-right: 16px;
@@ -84,20 +103,18 @@ export default {
   /* Add any other styling you need */
 }
 
+
 /* Responsive Styles */
 @media (max-width: 768px) {
   .partner-ui {
-    padding: 6% 0; /* Adjust padding for smaller screens */
+    padding: 6% 0;
+    /* Adjust padding for smaller screens */
   }
 
   .partner-heading {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    font-size: 20px;
+    /* Adjust font size for smaller screens */
   }
 
-  .partner-card {
-    width: 30%; /* Adjust card width for smaller screens */
-    height: 80px; /* Adjust card height for smaller screens */
-    margin-right: 10px; /* Adjust margin for smaller screens */
-  }
-}
-</style>
+  .partner-card {}
+}</style>

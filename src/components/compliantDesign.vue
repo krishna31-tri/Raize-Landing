@@ -16,8 +16,11 @@
         </p>
         <p>
           We are in the process of being affiliated to an officially recognized
-          <a href="https://www.finma.ch/en/authorisation/self-regulatory-organisations-sros/" target="_blank">self-regulatory organization (SRO)</a> according to the Anti-Money
-          Laundering Act by <a href="https://www.finma.ch/en/authorisation/self-regulatory-organisations-sros/sro-member-search/" target="_blank">FINMA</a>, the Swiss financial market supervisory
+          <a href="https://www.finma.ch/en/authorisation/self-regulatory-organisations-sros/"
+            target="_blank">self-regulatory organization (SRO)</a> according to the Anti-Money
+          Laundering Act by <a
+            href="https://www.finma.ch/en/authorisation/self-regulatory-organisations-sros/sro-member-search/"
+            target="_blank">FINMA</a>, the Swiss financial market supervisory
           authority
         </p>
       </div>
@@ -33,7 +36,12 @@
   margin-top: 4%;
   margin-bottom: 4%;
   position: relative;
-  padding: 0 20px; /* Add some horizontal padding for responsiveness */
+  padding: 0 20px;
+  /* Add some horizontal padding for responsiveness */
+}
+
+.compliant-main a {
+  color: #00B4D7;
 }
 
 .main-heading {
@@ -94,6 +102,7 @@
 }
 
 @media (max-width: 768px) {
+
   /* Add responsive styles here */
   .main-heading {
     font-size: 28px;
@@ -123,5 +132,4 @@
     font-size: 14px;
     width: 100%;
   }
-}
-</style>
+}</style>

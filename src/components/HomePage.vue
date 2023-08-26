@@ -35,6 +35,7 @@ export default {
 </script>
 <style>
 /* Desktop view styles (default) */
+
 .home {
   position: relative;
 }
@@ -42,8 +43,8 @@ export default {
 .homeWrapper {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  height: 650px;
+  justify-content: center;
+  height: 560px;
   align-items: center;
   max-width: 1500px;
   margin: auto;
@@ -52,6 +53,12 @@ export default {
 .homepage {
   display: flex;
   flex-direction: column;
+}
+
+.headingpre {
+  font-size: 60px;
+  font-weight: 800 !important;
+  font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
 .iconbg {
@@ -73,21 +80,19 @@ export default {
 
 .heading p {
   color: rgba(110, 116, 128, 1);
+  margin: 0;
 }
 
 .heading span {
-  margin-top: -30px;
+  margin-top: 1px;
   color: rgb(104, 104, 108);
+  font-weight: 800;
 }
 
 .headingpost {
   margin-top: -45px;
   margin-left: -250px;
-  background: linear-gradient(
-    to right,
-    rgb(15, 66, 233),
-    rgb(160, 203, 235, 1)
-  );
+  background: linear-gradient(to right, #2346B8 20%, #0BAADB 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -96,39 +101,36 @@ export default {
 .buttons {
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .genesisbutton {
   border: none;
   color: white;
-  background: linear-gradient(180deg, #234ccf 0%, #4a71f0 100%, #00b4d7 100%);
-  height: 70px;
-  width: 309px;
-  font-size: 15px;
+  background: linear-gradient(to bottom, #2346B8 20%, #0BAADB 100%);
+  font-size: 18px;
   border-radius: 60px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
   padding: 24px 36px 24px 36px;
-  top: 551px;
-  gap: 12px;
-  left: 100px;
 }
 
 .pitchbutton {
   color: #4a71f0;
-  height: 70px;
-  width: 164px;
   border-radius: 60px;
-  padding: 23px 36px 23px 36px;
   background: none;
   border: 2px solid #4a71f0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 18px;
+  padding: 23px 36px 23px 36px;
+
 }
 
 .videoside {
   width: 50%;
-  height: 100%;
+  height: 81%;
   display: flex;
-  justify-content: start;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 
 .video-container {
@@ -143,8 +145,8 @@ export default {
 }
 
 video {
-  width: 460px;
-  height: 263px;
+  width: 100%;
+  height: 315px;
   border-radius: 17px;
 }
 
@@ -157,8 +159,14 @@ video {
   height: 750px;
 }
 
+@media (max-width: 1380px) {
+  .headingpre {
+    font-size: 51px;
+  }
+}
+
 /* Tablet view styles */
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .homeWrapper {
     flex-direction: column;
     height: auto;
@@ -167,6 +175,16 @@ video {
 
   .homepage {
     text-align: center;
+    width: 80%;
+  }
+
+  .videoside {
+    width: 80%;
+    justify-content: center;
+  }
+
+  .heading {
+    align-items: center;
   }
 
   .iconbg {
@@ -185,14 +203,20 @@ video {
     margin-left: 0;
   }
 
+  .headingpre {
+    font-size: 60px;
+  }
+
   .buttons {
     flex-direction: row;
     gap: 10px;
+    width: 100%;
+    margin: auto;
   }
 
   .genesisbutton,
   .pitchbutton {
-    width: 80%;
+    width: 306px;
   }
 }
 
@@ -200,6 +224,10 @@ video {
 @media (max-width: 768px) {
   .homebg {
     width: 100%;
+  }
+
+  .headingpre {
+    font-size: 45px;
   }
 
   .iconbg {
@@ -215,15 +243,11 @@ video {
     width: 100%;
     height: auto;
   }
-}
-@media (max-width: 650px) {
+
   .buttons {
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-  }
-  .pitchbutton{
-    height: 70px;
-    width: 164px;
   }
 }
 </style>

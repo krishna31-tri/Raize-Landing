@@ -1,6 +1,7 @@
 <template>
   <div class="table-container">
     <h1>Competitive Landscape</h1>
+    <p>Short description goes here</p>
     <table class="custom-table">
       <thead>
         <tr>
@@ -14,7 +15,7 @@
         <tr v-for="(property, propertyName) in properties" :key="propertyName">
           <td>{{ propertyName }}</td>
           <td v-for="(company, companyName) in companies" :key="companyName">
-            {{ getTickCross(company[propertyName]) }}
+            {{ getTickCross(company[properties[propertyName]]) }}
           </td>
         </tr>
       </tbody>
@@ -26,14 +27,15 @@
 export default {
   data() {
     return {
-      // ... your companies and properties data ...
       companies: {
         Raize: {
           freeAccess: true,
           accessWithoutTokenAndLock: false,
           investmentSize: true,
           referralSystem: false,
+          seed: true,
           typeOfDeal: true,
+          public: true,
           lottery: true,
           fcfs: false,
           equityDeals: true,
@@ -43,7 +45,9 @@ export default {
           accessWithoutTokenAndLock: false,
           investmentSize: true,
           referralSystem: false,
+          seed: true,
           typeOfDeal: true,
+          public: true,
           lottery: true,
           fcfs: false,
           equityDeals: true,
@@ -53,7 +57,9 @@ export default {
           accessWithoutTokenAndLock: false,
           investmentSize: true,
           referralSystem: false,
+          seed: false,
           typeOfDeal: true,
+          public: true,
           lottery: true,
           fcfs: false,
           equityDeals: true,
@@ -63,7 +69,9 @@ export default {
           accessWithoutTokenAndLock: false,
           investmentSize: true,
           referralSystem: false,
+          seed: false,
           typeOfDeal: true,
+          public: true,
           lottery: true,
           fcfs: false,
           equityDeals: true,
@@ -73,19 +81,22 @@ export default {
           accessWithoutTokenAndLock: false,
           investmentSize: true,
           referralSystem: false,
+          seed: false,
           typeOfDeal: true,
+          public: true,
           lottery: true,
           fcfs: false,
           equityDeals: true,
         },
-        // Add other companies and their properties here
       },
       properties: {
         "Free Access": "freeAccess",
         "Access without Token and Lock": "accessWithoutTokenAndLock",
         "Investment Size (>1k)": "investmentSize",
         "Referral System (Lifetime)": "referralSystem",
-        "Type of Deal": "typeOfDeal",
+        "seed": "seed",
+        "Type of Deal Private": "typeOfDeal",
+        "Public": "public",
         "Lottery (Basic)": "lottery",
         "FCFS (Genesis)": "fcfs",
         "Equity Deals": "equityDeals",
@@ -108,14 +119,20 @@ export default {
 .table-container {
   display: flex;
   align-items: center;
-  margin-top: 20px;
   flex-direction: column;
+  width: 80%;
+  margin: 5% auto;
+}
+
+.table-container h1 {
+  margin: 0;
 }
 
 .custom-table {
   border-collapse: collapse;
   width: 80%;
   border: none;
+  margin-top: 2%;
 }
 
 .custom-table th,
@@ -124,6 +141,10 @@ export default {
   padding: 10px;
   text-align: center;
   border-right: 1px solid blue;
+}
+
+.custom-table th {
+  border: none;
 }
 
 .custom-table th:first-child,

@@ -8,7 +8,9 @@
                 <li>Access without Token and Lock</li>
                 <li>Investment Size (>1k)</li>
                 <li>Referral System (Lifetime)</li>
-                <li>Type of Deal</li>
+                <li>seed</li>
+                <li>Type of Deal Private</li>
+                <li>Public</li>
                 <li>Lottery (Basic)</li>
                 <li>FCFS (Genesis)</li>
                 <li>Equity Deals</li>
@@ -17,19 +19,9 @@
                 :pagination="{ clickable: true }" :scrollbar="{ draggable: true }" @swiper="onSwiper"
                 @slideChange="onSlideChange">
                 <swiper-slide class="slide">
-                    <ul class="mobile-comp-static">
+                    <ul class="mobile-comp-dynamic">
                         <li>✔️</li>
                         <li>✔️</li>
-                        <li>✔️</li>
-                        <li>✔️</li>
-                        <li>✔️</li>
-                        <li>✔️</li>
-                        <li>✔️</li>
-                        <li>✔️</li>
-                    </ul>
-                </swiper-slide>
-                <swiper-slide class="slide">
-                    <ul class="mobile-comp-static">
                         <li>✔️</li>
                         <li>✔️</li>
                         <li>✔️</li>
@@ -41,7 +33,51 @@
                     </ul>
                 </swiper-slide>
                 <swiper-slide class="slide">
-                    <ul class="mobile-comp-static">
+                    <ul class="mobile-comp-dynamic">
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>❌</li>
+                        <li>❌</li>
+                        <li>✔️</li>
+                        <li>❌</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>❌</li>
+                        <li>❌</li>
+                    </ul>
+                </swiper-slide>
+                <swiper-slide class="slide">
+                    <ul class="mobile-comp-dynamic">
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                    </ul>
+                </swiper-slide>
+                <swiper-slide class="slide">
+                    <ul class="mobile-comp-dynamic">
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                        <li>✔️</li>
+                    </ul>
+                </swiper-slide>
+                <swiper-slide class="slide">
+                    <ul class="mobile-comp-dynamic">
+                        <li>✔️</li>
+                        <li>✔️</li>
                         <li>✔️</li>
                         <li>✔️</li>
                         <li>✔️</li>
@@ -107,13 +143,18 @@ export default {
 }
 
 .slide {
-    border: 1px solid red;
+    border-right: 1px solid #4A71F0;
+    border-left: 1px solid #4A71F0;
     width: 100px;
 }
 
 .mobile-comp li {
     list-style: none;
-    height: 100px;
+    height: 55px;
+    color: #4A71F0;
+    text-align: start;
+    font-weight: 600;
+    padding-left: 6%;
 }
 
 .mobile-comp-static {
@@ -121,7 +162,7 @@ export default {
 }
 
 .custom-swiper {
-    width: 50%;
+    width: 200px;
     margin: 0;
     overflow: clip;
     overflow-y: visible;
@@ -139,7 +180,7 @@ export default {
 .swiper-pagination-custom,
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-    top: -4%;
+    top: -6%;
 }
 
 .swiper-button-prev::after,
@@ -147,5 +188,16 @@ export default {
     width: 20px;
     height: 20px;
     font-size: 20px;
+}
+
+.swiper-horizontal>.swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    display: none;
+}
+
+@media (min-width:768px) {
+    .mobile-comp {
+        display: none;
+    }
 }
 </style>

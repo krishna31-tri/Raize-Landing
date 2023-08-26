@@ -36,6 +36,9 @@ export default {
 .toggle-container {
     text-align: center;
     margin-top: 20px;
+    border: 1px solid #4A71F0;
+    border-radius: 8px;
+    padding-top: 4%;
 }
 
 .toggle-button {
@@ -81,6 +84,12 @@ export default {
 .active-leave-to {
     background-color: #007bff;
     color: white;
+}
+
+@media (min-width: 767px) {
+    .toggle-container {
+        display: none;
+    }
 }
 </style>
   

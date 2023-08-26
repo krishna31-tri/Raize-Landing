@@ -13,8 +13,9 @@
     <Team_partners />
     <FAQ />
     <DesktopRoadmap />
-    <RoadMap />
+    <RoadmapSection />
     <FooterPage />
+
 
   </div>
 </template>
@@ -34,10 +35,11 @@ import FooterPage from './components/footer.vue'
 import NavBar from './components/NavBar.vue';
 import SubscriptionPlan from './components/subscriptionPlan.vue';
 import DesktopRoadmap from './components/DesktopRoadmap.vue';
-import RoadMap from './components/roadMap.vue';
 import MobileSubscription from './components/MobileSubscription.vue';
 import MobilecompetitveLandscape from './components/MobilecompetitveLandscape.vue';
 import MobileNav from './components/MobileNav.vue';
+import RoadmapSection from './components/RoadmapSection.vue';
+
 export default {
   name: 'App',
   components: {
@@ -46,7 +48,6 @@ export default {
     CompliantDesign,
     FAQ,
     FooterPage,
-    RoadMap,
     Incentive_Program,
     TeamTalented,
     Team_partners,
@@ -55,13 +56,14 @@ export default {
     DesktopRoadmap,
     MobileSubscription,
     MobilecompetitveLandscape,
-    MobileNav
+    MobileNav,
+    RoadmapSection,
   }
 }
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
 
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -71,6 +73,7 @@ export default {
   color: #2c3e50;
   margin-top: 60px;
   font-family: 'Plus Jakarta Sans';
+  font-weight: 100;
 }
 
 button {

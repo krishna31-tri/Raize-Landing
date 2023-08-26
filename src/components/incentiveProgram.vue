@@ -2,9 +2,10 @@
   <div class="incentive-program">
     <img class="incentivebg" alt="Vue logo" src="../assets/incentivebg.png" />
     <div class="incentive-program-div">
-      <h1 class="heading">A Unique Partner's Incentive Program</h1>
+      <h1 class="">A Unique Partner's Incentive Program</h1>
       <div class="card-container1">
         <img class="linebg" alt="Vue logo" src="../assets/linebg.svg" />
+        <img class="linebg1" alt="Vue logo" src="../assets/linebg1.svg" />
         <div class="main-card card1">
           <div class="inner-card">
             <div class="referral-link">
@@ -94,6 +95,8 @@ export default {
   align-items: center;
 }
 
+
+
 .incentivebg {
   position: absolute;
   top: 0%;
@@ -139,6 +142,10 @@ export default {
   transform: translate(-50%, -100%);
   width: 84%;
   z-index: -1;
+}
+
+.linebg1 {
+  display: none;
 }
 
 .main-card {
@@ -233,6 +240,64 @@ export default {
   background: rgba(74, 113, 240, 1);
 }
 
-/* Include a link to the Font Awesome CSS for the icons */
+@media(max-width:1300px) {
+  .card-container1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 38px;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+  }
+
+  .incentivebg {
+
+    display: none;
+  }
+
+  .linebg {
+    display: none;
+  }
+
+  .linebg1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 10%;
+    z-index: -1;
+    display: unset;
+  }
+
+  .incentive-program-div h1 {
+    text-align: center;
+    text-align: center;
+    width: 89vw;
+  }
+
+}
+
+@media(max-width:700px) {
+
+  .incentive-program-div h1 {
+    font-size: 21px;
+  }
+
+  .incentive-program {
+    padding: 0;
+  }
+
+  .linebg1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -55%);
+    width: 32%;
+    z-index: -1;
+    display: unset;
+  }
+}
 </style>
   

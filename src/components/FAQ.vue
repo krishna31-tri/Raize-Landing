@@ -1,13 +1,10 @@
 <template>
   <div class="faq-container">
     <h1 class="faq-heading">FAQ</h1>
+    <p>Short description goes here</p>
     <div class="faq-list">
-      <div
-        v-for="(question, index) in faqData"
-        :key="index"
-        class="faq-item"
-        :class="{ 'open': selectedQuestion === index }"
-      >
+      <div v-for="(question, index) in faqData" :key="index" class="faq-item"
+        :class="{ 'open': selectedQuestion === index }">
         <div class="question-wrapper" @click="toggleAnswer(index)">
           <h3 class="question">{{ question.question }}</h3>
           <span class="dropdown-arrow">&#9662;</span>
@@ -45,7 +42,7 @@ export default {
         },
         // Add more questions and answers as needed
       ],
-      
+
       selectedQuestion: null,
     };
   },
@@ -73,6 +70,7 @@ export default {
   margin-bottom: 20px;
   color: #001d3d;
   text-align: center;
+  width: unset;
 }
 
 .faq-item {
@@ -98,6 +96,8 @@ export default {
   margin: 0;
   color: #001d3d;
   flex-grow: 1;
+  text-align: start;
+  padding: 0% 2%;
 }
 
 .dropdown-arrow {
@@ -107,5 +107,7 @@ export default {
 .answer {
   margin-top: 10px;
   color: #001d3d;
+  text-align: start;
+  padding: 0% 2%;
 }
 </style>

@@ -62,14 +62,17 @@ export default {
     width: 95vw;
     margin: auto;
     padding: 2vw 3vw;
+    background-color: #fff;
 }
-.menu-content{
+
+.menu-content {
     display: flex;
     justify-content: space-around;
     margin-top: 95px;
     /* gap: 241px; */
     flex-direction: row;
 }
+
 .logo {
     margin-right: auto;
     /* Add styles to position and size your logo */
@@ -124,6 +127,8 @@ export default {
     border-radius: 5px;
     animation: slide-in-3cbfc4a1 0.3s ease;
     z-index: -1;
+    background-image: url(../assets/backgroundhome.png);
+    background-size: 70%;
 }
 
 @keyframes slide-in {
@@ -152,6 +157,7 @@ export default {
 .column {
     margin-right: 20px;
 }
+
 .menu-items {
     list-style: none;
     padding: 0;
@@ -200,6 +206,7 @@ export default {
     color: #fff;
     cursor: pointer;
 }
+
 .get-in-touch {
     padding: 20px;
     text-align: right;
@@ -208,8 +215,8 @@ export default {
 }
 
 .get-in-touch p {
-  font-size: 18px;
-  margin-bottom: 10px;
+    font-size: 18px;
+    margin-bottom: 10px;
 }
 
 .email-link {
@@ -219,8 +226,15 @@ export default {
     text-decoration: none;
     font-weight: 700;
 }
+
 .launch-button:hover,
 .contact-button:hover {
     background-color: #e67e00;
+}
+
+@media(max-width:468px) {
+    .menu {
+        padding: 0px;
+    }
 }
 </style>
