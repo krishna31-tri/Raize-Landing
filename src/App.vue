@@ -1,50 +1,61 @@
 <template>
   <div>
-    <!-- <NavBar /> -->
+    <NavBar />
+    <MobileNav />
     <HomePage />
     <CompetitiveLandscape />
+    <MobilecompetitveLandscape />
     <CompliantDesign />
-    <!-- <SubscriptionPlan /> -->
+    <SubscriptionPlan />
+    <MobileSubscription />
     <Incentive_Program />
-
     <TeamTalented />
     <Team_partners />
     <FAQ />
-    <!-- <Road_Map />
-    <Road_Map_Desktop /> -->
+    <DesktopRoadmap />
+    <RoadMap />
     <FooterPage />
+
   </div>
 </template>
 
 <script>
-// import NavBar from './components/NavBar.vue'
+
 import HomePage from './components/HomePage.vue'
 import CompetitiveLandscape from './components/competitiveLandscape.vue';
 import CompliantDesign from './components/compliantDesign.vue';
 import FAQ from './components/FAQ.vue';
 import TeamTalented from './components/teamtalented.vue'
 import Incentive_Program from './components/incentiveProgram.vue'
-// import Road_Map from './components/roadMap.vue'
-// import Road_Map_Desktop from './components/DesktopRoadmap.vue'
+
+
 import Team_partners from './components/partners.vue';
 import FooterPage from './components/footer.vue'
-// import SubscriptionPlan from './components/subscriptionPlan.vue'
-
+import NavBar from './components/NavBar.vue';
+import SubscriptionPlan from './components/subscriptionPlan.vue';
+import DesktopRoadmap from './components/DesktopRoadmap.vue';
+import RoadMap from './components/RoadMap.vue';
+import MobileSubscription from './components/MobileSubscription.vue';
+import MobilecompetitveLandscape from './components/MobilecompetitveLandscape.vue';
+import MobileNav from './components/MobileNav.vue';
 export default {
   name: 'App',
   components: {
-    // NavBar,
     HomePage,
     CompetitiveLandscape,
     CompliantDesign,
     FAQ,
     FooterPage,
-    // Road_Map,
-    // Road_Map_Desktop,
+    RoadMap,
     Incentive_Program,
     TeamTalented,
     Team_partners,
-    // SubscriptionPlan
+    NavBar,
+    SubscriptionPlan,
+    DesktopRoadmap,
+    MobileSubscription,
+    MobilecompetitveLandscape,
+    MobileNav
   }
 }
 </script>

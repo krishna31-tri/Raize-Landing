@@ -1,25 +1,22 @@
 <template>
   <div class="subscription-app">
-      <h1>BECOME ONE OF OUR 200 GENESiS PARTNERS</h1>
+    <h1>BECOME ONE OF OUR 200 GENESiS PARTNERS</h1>
     <table class="properties">
       <tbody>
         <tr>
           <td class="plan-details">
-            <!-- <h2>Basic</h2>
-            <p>Free / Lifetime</p>
-            <button @click="signUp('basic')">Sign Up</button> -->
           </td>
           <td class="plan-details">
             <h2 style="font-size: 16px;">Basic</h2>
             <p class="free-text">Free<span class="lifetime-text">/Lifetime</span></p>
             <p style="font-size: 12px; font-weight: 500; color: rgba(145,145,163,1);">Free of charge. Start Anytime</p>
-            <button class="signUp-button" @click="signUp('basic')">Sign Up</button>
+            <button class="signUp-button">Sign Up</button>
           </td>
           <td class="plan-details">
             <h2 style="font-size: 16px;">Genesis</h2>
             <p class="free-text">$500<span class="lifetime-text">/ Lifetime</span></p>
             <p style="font-size: 12px; font-weight: 500; color: rgba(145,145,163,1);">One single payment. No more!</p>
-            <button class="subscribe-button"  @click="subscribe('genesis')">Subscribe</button>
+            <button class="subscribe-button">Subscribe</button>
           </td>
         </tr>
         <tr class="property-row">
@@ -74,31 +71,26 @@
 
 <script>
 export default {
-  methods: {
-    signUp(plan) {
-      alert(`Signed up for ${plan} plan`);
-    },
-    subscribe(plan) {
-      alert(`Subscribed to ${plan} plan`);
-    }
-  }
+
 };
 </script>
 
 <style>
-.free-text{
+.free-text {
   font-size: 40px;
   font-family: 'Plus Jakarta Sans';
   color: rgba(74, 113, 240, 1);
 
 }
-.lifetime-text{
+
+.lifetime-text {
   font-size: 16px;
   font-family: 'Plus Jakarta Sans';
   color: rgba(74, 113, 240, 1);
 
 }
-.subscribe-button{
+
+.subscribe-button {
   height: 42px;
   width: 342px;
   border-radius: 60px;
@@ -106,6 +98,7 @@ export default {
   background: rgba(74, 113, 240, 1);
   color: white;
 }
+
 .subscription-app {
   font-family: Arial, sans-serif;
   margin: 20px;
@@ -116,7 +109,8 @@ table {
   width: 100%;
 }
 
-th, td {
+th,
+td {
   padding: 10px;
   text-align: center;
 }
@@ -163,12 +157,19 @@ h2 {
   display: block;
   margin: 0 auto;
 }
-.signUp-button{
+
+.signUp-button {
   height: 42px;
   width: 342px;
   border-radius: 60px;
   border: 1px;
-  background: linear-gradient(0deg, #DAE2FA, #DAE2FA),linear-gradient(0deg, #FFFFFF, #FFFFFF);
+  background: linear-gradient(0deg, #DAE2FA, #DAE2FA), linear-gradient(0deg, #FFFFFF, #FFFFFF);
   color: rgba(0, 29, 61, 1);
+}
+
+@media (max-width:768px) {
+  .subscription-app {
+    display: none;
+  }
 }
 </style>

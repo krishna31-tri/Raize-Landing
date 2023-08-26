@@ -14,7 +14,7 @@
         <tr v-for="(property, propertyName) in properties" :key="propertyName">
           <td>{{ propertyName }}</td>
           <td v-for="(company, companyName) in companies" :key="companyName">
-              {{ getTickCross(company[propertyName]) }}
+            {{ getTickCross(company[propertyName]) }}
           </td>
         </tr>
       </tbody>
@@ -105,13 +105,11 @@ export default {
 </script>
 
 <style scoped>
-
-
 .table-container {
   display: flex;
-    align-items: center;
-    margin-top: 20px;
-    flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  flex-direction: column;
 }
 
 .custom-table {
@@ -161,5 +159,11 @@ export default {
 .company-logo {
   max-width: 100px;
   max-height: 40px;
+}
+
+@media (max-width:768px) {
+  .table-container {
+    display: none;
+  }
 }
 </style>
